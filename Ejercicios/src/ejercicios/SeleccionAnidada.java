@@ -44,7 +44,7 @@ public class SeleccionAnidada {
                     System.out.printf("%s (regular) con %d\n",mensaje,
                             calificacion);
                 } else {
-                    System.out.printf("%s (reprobado) con %d\n",mensaje2,
+                    System.out.printf("%s con %d\n",mensaje2,
                             calificacion);
                 }
             }
