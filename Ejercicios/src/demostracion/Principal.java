@@ -30,21 +30,27 @@ public class Principal {
         int diferencia;
         double valor;
         double valor_mensual;
+        double monto;
         
-        //Uso de condiciones para calcular el valor mensual dependiendo la cantidad de mensajes usados
-        
+        /*Uso de condiciones para calcular el valor mensual dependiendo
+          la cantidad de mensajes usados*/
+       
         if (mensajes <= 40){
             valor = 3; //El valor 3 es la tarifa basica
-            valor_mensual = valor + (valor * 0.12);//valor mensual es igual al valor de la tarifa basica + 12% de IVA
+            valor_mensual = valor + (valor * 0.12);/*valor mensual es igual 
+            al valor de la tarifa basica + 12% de IVA*/
             
         } else {
             if (mensajes > 40 && mensajes <= 200){
-                diferencia = mensajes - 40;//calcular la cantidad de mensajes despues del mensaje 40
+                diferencia = mensajes - 40;/*calcular la cantidad de mensajes
+                despues del mensaje 40*/
                 valor = 3 + (diferencia * 0.05);
                 valor_mensual = valor + (valor * 0.12);
             } else {
-                diferencia = mensajes - 200;//calcular la cantidad de mensajes despues del mensaje 200
-                valor = 3 + (diferencia * 0.1);
+                diferencia = mensajes - 200;/*calcular la cantidad de mensajes
+                despues del mensaje 200*/
+                monto = (160 - 40) * 0.05;
+                valor = monto + 3 + (diferencia * 0.1);
                 valor_mensual = valor + (valor * 0.12);
             }
         }
